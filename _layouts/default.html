@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang={{ page.lang | default: site.lang | default: "en" }}>
+{% include head.html %}
+<body>
+    <div class="container">
+        <h1><a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+        {{ content }}
+    </div>
+    {% include scripts.html %}
+</body>
+</html>
