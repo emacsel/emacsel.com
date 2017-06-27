@@ -1,0 +1,24 @@
+main:
+  - title: Episodes
+    url: /episodes
+    order: 10
+  - title: Tags
+    url: /tags
+    order: 20
+  - title: Feeds
+    url: /feeds
+    order: 30
+
+social:
+  - title: GitHub
+    url: https://github.com/emacsel
+    order: 10
+  - title: Twitter
+    url: https://twitter.com/emacsel
+    order: 20
+  - title: Mastodon
+    url: https://mastodon.social/@emacsel
+    order: 30
+  - title: Matrix
+    url: https://riot.im/app/#/room/#emacsel:matrix.org
+    order: 40

@@ -1,0 +1,22 @@
+<header class="navbar navbar-default"
+        role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="{{ "/" | relative_url }}" class="navbar-brand">
+                <span class="full">{{ site.full_title | escape }}</span>
+                <span class="short">{{ site.title | escape }} </span>
+            </a>
+        </div>
+        <div class="navbar"
+             role="navigation">
+            <ul class="nav navbar-nav">
+                {% assign main_nav_items = site.data.nav.main | sort: 'order' %}
+                {% for item in main_nav_items %}
+                <li{% if item.url == page.url %} class="active"{% endif %}>
+                    <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</header>

@@ -2,9 +2,15 @@
 <html lang={{ page.lang | default: site.lang | default: "en" }}>
 {% include head.html %}
 <body>
+    {% include header.html %}
     <div class="container">
-        <h1><a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-        {{ content }}
+        <div class="row">
+            <div class="content">
+                <h1><a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+                {{ content }}
+            </div>
+        </div>
+        {% include footer.html %}
     </div>
     {% include scripts.html %}
 </body>
