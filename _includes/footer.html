@@ -1,0 +1,15 @@
+<footer{% unless page.url contains "/episodes/" %} class="index"{% endunless %}>
+    <hr/>
+    <p class="pull-left">
+        Follow <strong>@emacsel</strong>:<br/>
+        {% assign social_items = site.data.nav.social | sort: 'order' %}
+        {% for item in social_items %}
+        <span><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></span>
+        {% endfor %}
+    </p>
+    <p class="pull-right">
+        <br/>
+        {% comment %}<span><a href="/blog">Blog</a></span>{% endcomment %}
+        <span><a href="/legalese">Legalese</a></span>
+    </p>
+</footer>

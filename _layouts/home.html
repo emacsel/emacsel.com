@@ -1,3 +1,44 @@
 ---
 layout: default
 ---
+
+{{ content }}
+
+<h2>Recent Episodes</h2>
+
+{% assign sorted = site.episodes
+                 | where_exp: "ep", "ep.hide != true"
+                 | sort: 'date'
+                 | reverse %}
+{% for episode in sorted limit:5 %}
+<article class="home">
+    <header>
+        <h2 class="index">
+            <a href="{{ episode.url }}">{{ episode.title }}</a>
+        </h2>
+    </header>
+</article>
+{% endfor %}
+
+<h2 id="hosts">Hosts</h2>
+
+<div class="row">
+    <div class="host col-md-4 col-md-offset-2">
+        <a class="nohl" href="http://www.pygopar.com">
+            <img class="img-circle" alt="Daniel Gopar" src="/img/gopar.jpg"/>
+        </a>
+        <p>
+            <strong>Daniel Gopar</strong><br/>
+            <a href="https://twitter.com/pygopar">@pygopar</a>
+        </p>
+    </div>
+    <div class="host col-md-4">
+        <a class="nohl" href="https://aminb.org">
+            <img class="img-circle" alt="Amin Bandali" src="/img/aminb.jpg"/>
+        </a>
+        <p>
+            <strong>Amin Bandali</strong><br/>
+            <a href="https://twitter.com/aminban">@aminban</a>
+        </p>
+    </div>
+</div>

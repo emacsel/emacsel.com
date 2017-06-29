@@ -1,6 +1,6 @@
 title: Emacs.el
 full_title:  Emacs.el Podcast
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Emacs.el, the podcast where we talk about Emacs and nothing but Emacs!
   We talk about packages, cool configs, and people who make all of this
   possible.
@@ -15,6 +15,29 @@ plugins:
   - jekyll-feed
 
 livereload: true
+
+collections:
+  episodes:
+    output: true
+    permalink: /:collection/:path
+
+podcast_url: "https://emacsel.com"
+podcast_cdn: "https://cdn.emacsel.com"
+podcast_cdn_baseurl: "/episodes"
+podcast_album_art: /img/mypodcast.jpg
+podcast_title: Emacs.el
+podcast_owner: Daniel Gopar
+podcast_email: gopardaniel@gmail.com
+podcast_category: Technology             # iTunes categories:
+podcast_subcategory_one: Tech News       # https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12
+podcast_subcategory_two: Software How-To
+podcast_explicit: "no"
+podcast_host: Daniel Gopar and Amin Bandali
+podcast_description: >
+  Emacs.el, the podcast where we talk about Emacs and nothing but Emacs!
+  We talk about packages, cool configs, and people who make all of this
+  possible.
+podcast_subtitle: Emacs Podcast
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

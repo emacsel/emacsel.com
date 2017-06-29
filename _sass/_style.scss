@@ -1,0 +1,493 @@
+/* Fonts */
+// @import url("./fonts.css");
+
+
+/* Global */
+body {
+    font-family: concourse-t3, sans-serif;
+    color: #333;
+    font-size: 20px;    
+}
+
+.container {
+    position: relative;
+    max-width: 600px;
+    padding: 0 30px;
+}
+
+/* Links */
+
+a {
+    color: #880000 !important;
+    padding: 2px;
+    margin: -2px;
+    text-decoration: none !important;
+}
+
+a:not(.navbar-brand):hover, .pager li:hover a {
+    background-color: rgba(136, 0, 0, 0.09) !important;
+}
+
+article.index h2 a:hover {
+    background-color: rgba(238, 238, 238, 0.72) !important;
+}
+
+a.nohl:hover {
+    background: none !important;
+}
+
+
+
+/* Nav */
+.nav {
+    padding-top: 15px;
+}
+
+.navbar {
+    background: none;
+    height: 70px;
+    border-bottom: none;
+    padding-right: 5px;
+    margin-left: auto;
+    /* margin-right: auto; */
+    border: none;
+    margin-top: 20px;
+}
+
+.navbar .container {
+    height: 70px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    /* max-width: 700px; */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 0px;
+        font-size: 18px ;
+    }
+
+    .navbar {
+        padding: 5px 5px 0 3px;
+        margin-top: 0 !important;
+    }
+
+    .navbar-brand {
+        line-height: 24px;
+    }
+
+    .navbar-brand .full {
+        display: none !important;
+    }
+
+    .navbar-brand .short {
+        display: inline !important;
+    }
+
+
+    .navbar-toggle {
+        position: absolute;
+        right: 0;
+    }
+
+    pre {
+        padding-left: 20px !important;
+        width: inherit !important;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+
+/* Nav */
+a.navbar-brand {
+    font-weight: bold;
+    background: none;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9) !important;
+    font-family: concourse-c3, sans-serif !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand .full {
+    display: inline;
+}
+
+.navbar-brand .short {
+    display: none;
+}
+
+ul.nav.navbar-nav {
+    margin-left: auto;
+    font-size: 75%;
+}
+
+.nav>li {
+    display: inline-block;
+}
+
+ul.nav.navbar-nav {
+    display: flex;
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+.nav li a {
+    padding: 1px 0px;
+    margin: 0 10px;
+    transition: all .3s;
+    border-bottom: 2px solid transparent;
+    color: #444 !important;
+    font-family: concourse-t3, sans-serif !important;
+}
+
+.nav .active a, .nav > li a:hover {
+    background: none !important;
+    border-bottom: 2px solid black;
+    color: black !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: concourse-t3, sans-serif !important;
+}
+
+h1 {
+    /* border-top: 2px solid black; */
+    border-bottom: none;
+    display: inline-block;
+    font-size: 150%;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+h2 {
+    margin: 30px 0 5px 0;
+}
+
+h2.index {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+h2:not(.index) {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#hosts {
+    margin-top: 55px;
+}
+
+#tags h2 {
+    margin-top: 30px;
+}
+
+h2 a {
+    color: #333 !important;
+    /* padding: 2px 7px; */
+    /* display: inline-block; */
+    position: relative;
+    /* left: -5px; */
+}
+
+h4 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+/* Code */
+.linenos {
+    display: none;
+}
+
+code {
+    color: black;
+}
+
+.sourcetable {
+    width: 100%;
+}
+
+code, pre {
+    font-family: Fira Code;
+    font-size: 75%;
+}
+
+pre {
+    white-space: pre;
+    margin: 0;
+    background-color: rgba(139, 121, 121, 0.05);
+    border-radius: 0;
+    margin: 20px 0;
+    border-width: 0;
+    padding: 20px;
+    padding-left: 50px;
+    overflow: auto;
+    background: none;
+    word-wrap: normal;
+    display: block;
+    width: 700px;
+}
+
+
+article {
+    margin-bottom: 75px;
+    /* margin-top: 25px; */
+}
+
+article.index, article#page {
+    margin-bottom: 20px;
+    /* margin-top: 25px; */
+}
+
+article.home {
+    margin-bottom: -5px;
+}
+
+.post-title {
+    padding-bottom: 15px;
+}
+
+article img {
+  /* Make sure that images within blog articles never take more width
+     than the article width; `height: auto` ensures the height is also
+     resized proportionally.
+
+     This is useful given that Markdown itself gives you little
+     control over image resizing, and in particular no way to achieve
+     this "best fit" behavior.
+ */
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+.caption {
+    display: none;
+}
+
+
+
+
+button.navbar-toggle {
+    border: none;
+    opacity: 0.4;
+}
+
+span.icon-bar {
+    background-color: #191919 !important;
+}
+
+.navbar-collapse {
+    margin-left: auto !important;
+}
+
+
+/* Footer */
+.container > footer {
+    font-size: 75% !important;
+}
+
+.container > footer > p {
+    margin-top: 0;
+    font-family: concourse-t3, sans-serif !important;
+}
+
+article footer {
+    margin-top: 15px;
+}
+
+article footer.post-footer {
+    margin-top: 100px;
+    border-top: 1px solid #eee;
+}
+
+article footer.post-footer > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+
+@media(min-width: 768px) {
+    footer {
+        position: relative;
+    }
+}
+
+
+
+footer:not(.index) hr {
+    display: none;
+}
+
+footer:not(.index) {
+    margin-top: -30px;    
+}
+
+footer span:not(:last-child)::after {
+    content: " /";
+}
+
+
+/* Lists */
+
+
+/* Date and Tags */
+p.date-and-tags {
+    display: none;
+}
+
+
+.date-and-tags {
+    font-style: italic;
+}
+
+/* Pager */
+.pager li a {
+    border: none;
+    border-radius: 0;
+    display: inline;
+    padding: 2px;
+}
+
+
+.pager li a em {
+    font-style: normal;
+}
+
+
+article footer:not(.post-footer) {
+    display: none;
+}
+
+
+blockquote {
+    color: #707070;
+    /*border-left: 0px solid #eee;*/
+    border: none !important;
+    background: none !important;
+    padding-left: 0px;
+}
+
+
+ul.pager {
+    display: flex;
+}
+
+ul.pager li {
+    width: 50%;
+}
+
+ul.pager li.next {
+    margin-left: auto;
+}
+
+.pager a {
+    /* display: inline !important; */
+}
+
+.pagination>li a {
+    background: none;
+    border: none;
+    border-radius: 0 !important;
+}
+
+.pagination>li {
+    border-radius: 0;
+}
+
+.pagination>li.active a {
+    /* font-weight: bold; */
+    background: none !important;
+    opacity: 0.2;
+}
+
+.pagination>li.disabled a {
+    display: none;
+}
+
+pre::-webkit-scrollbar {
+    display: none;
+}
+
+cite {
+    font-style: italic;
+    display: block;
+    margin-top: 5px;
+    font-size: 80%;
+}
+
+cite a {
+}
+
+cite a:not(:hover) {
+    color: inherit !important;
+}
+
+blockquote p {
+    blockquote p {     font-size: 90% !important; }
+    blockquote p {     font-size: 90% !important; }
+    font-size: 90%;
+}
+
+nav .dropdown-menu li a {
+    padding: 5px;
+}
+
+.nav .dropdown-menu a {
+    padding: 5px;
+    border-bottom: none !important;
+}
+
+.index p {}
+
+body>.container {
+    margin-top: 25px;
+}
+
+header.navbar {
+    margin-top: 25px;
+}
+
+.bullet {
+    font-size: 10px;
+    /* margin-bottom: 10px; */
+    margin: 2pz;
+}
+
+.feeds a:first-child {
+    margin-right: 3px;
+}
+
+.host {
+    p {
+        text-align:center;
+        margin-top: -20px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+    }
+}
