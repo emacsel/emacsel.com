@@ -1,0 +1,5 @@
+{% assign filename = include.url | split: '/' | last | prepend: "emacsel-ep" %}
+<audio style="width: 100%;" title="{{ include.title }}" controls preload="metadata">
+    <source src="{{ site.podcast_cdn }}{{ site.podcast_cdn_baseurl }}/{{ filename }}.mp3" type="audio/mpeg">
+    <source src="{{ site.podcast_cdn }}{{ site.podcast_cdn_baseurl }}/{{ filename }}.ogg" type="audio/ogg">
+</audio>
