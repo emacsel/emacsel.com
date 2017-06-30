@@ -24,7 +24,7 @@ collections:
 podcast_url: "https://emacsel.com"
 podcast_cdn: "https://cdn.emacsel.com"
 podcast_cdn_baseurl: "/episodes"
-podcast_album_art: /img/mypodcast.jpg
+podcast_album_art: /img/emacsel.png
 podcast_title: Emacs.el
 podcast_owner: Daniel Gopar
 podcast_email: gopardaniel@gmail.com
