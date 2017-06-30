@@ -15,7 +15,35 @@ layout: default
         </p>
     </header>
     {{ content }}
+
+    {% capture the_collection %}{{ page.collection }}{% endcapture %}
+
+    {% if page.collection %}
+    {% assign document = site[the_collection] %}
+    {% endif %}
+
+    {% assign sorted = document | where_exp: "ep", "ep.hide != true" | sort: 'date' %}
+    {% for links in sorted %}
+    {% if links.title == page.title %}
+    {% unless forloop.first %}
+    {% assign prev_ep_url = prev.url %}
+    {% assign prev_ep_title = prev.title %}
+    {% endunless %}
+    {% unless forloop.last %}
+    {% assign next = document[forloop.index] %}
+    {% assign next_ep_title = next.title %}
+    {% assign next_ep_url = next.url %}
+    {% endunless %}
+    {% endif %}
+    {% assign prev = links %}
+    {% endfor %}
+
+    {% if prev_ep_url or next_ep_url %}
     <footer class="post-footer">
-        TODO: prev/next link
+        <ul class="pager">
+            {% if next_ep_url %}<li class="previous"><a href="{{ next_ep_url }}"><em>&larr; {{ next_ep_title }}</em></a></li>{% endif %}
+            {% if prev_ep_url %}<li class="next"><a href="{{ prev_ep_url }}"><em>{{ prev_ep_title }}</em> &rarr;</a></li>{% endif %}
+        </ul>
     </footer>
+    {% endif %}
 </article>
