@@ -16,7 +16,7 @@ The source code used for generating Emacs.el's website is available on GitHub
 at <https://github.com/emacsel/emacsel.com>
 under [GPLv3](https://github.com/emacsel/emacsel.com/blob/master/LICENSE).
 
-Also, big shout out to [Rein van der Woerd](http://reinvanderwoerd.nl/) for
+Also, big shoutout to [Rein van der Woerd](http://reinvanderwoerd.nl/) for
 letting us adopt and use his website's style for Emacs.el.
 
 ## Logo
