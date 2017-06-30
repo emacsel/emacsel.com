@@ -1,0 +1,9 @@
+{% comment %}
+{% if page.url contains "/episodes/" %}
+<script src="https://cdn.plyr.io/2.0.13/plyr.js"></script>
+<script>plyr.setup({
+     // TODO: check if upstream fixed the typo
+     keyboardShorcuts: { focused: true, global: true }
+ });</script>
+{% endif %}
+{% endcomment %}
