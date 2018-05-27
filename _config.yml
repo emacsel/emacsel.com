@@ -22,7 +22,7 @@ collections:
     permalink: /:collection/:path
 
 podcast_url: "https://emacsel.com"
-podcast_cdn: "https://cdn.emacsel.com"
+podcast_cdn: "https://dl.emacsel.com"
 podcast_cdn_baseurl: "/episodes"
 podcast_album_art: /img/emacsel.png
 podcast_title: Emacs.el
